@@ -1,6 +1,7 @@
 import slide1 from "@/assets/images/slide1.webp";
 import slide2 from "@/assets/images/slide2.webp";
 import slide3 from "@/assets/images/slide3.webp";
+import slide4 from "@/assets/images/slide4.webp";
 import {
   EditIcon,
   Enhancer,
@@ -8,6 +9,7 @@ import {
   LipSync,
   MotionIcon,
   RealTime,
+  TrainIcon,
   VideoIcon,
 } from "@/components/common/icons";
 import { CarouselProps, ToolCardProps } from "@/types";
@@ -63,8 +65,8 @@ export const tools: ToolCardProps[] = [
   {
     title: "Train",
     description: "Teach Krea to replicate your style, products, or characters.",
-    // icon: <FaBrain className="h-5 w-5 text-gray-600" />,
-    iconBg: "bg-gray-200",
+    icon: TrainIcon,
+    iconBg: "bg-white",
   },
 ];
 
@@ -98,11 +100,11 @@ export const carouselItems: CarouselProps[] = [
   },
   {
     id: 4,
-    title: "WAN 2.2 Image generation",
+    title: "Seedream 4.0",
     description:
-      "Explore our collection of open source models and tools. Build, customize, and deploy your own AI solutions.",
-    buttonText: "Explore",
-    image: slide1,
+      "Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.",
+    buttonText: "Start Generating",
+    image: slide4,
     badge: "OPEN SOURCE",
   },
 ];

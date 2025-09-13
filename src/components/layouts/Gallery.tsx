@@ -7,7 +7,7 @@ export function Gallery() {
     <section className="py-10">
       {/* Header */}
       <div className="mb-5 flex items-center justify-between">
-        <h2 className="lg:text-xl text-lg font-medium">Gallery</h2>
+        <h2 className="text-xl font-medium">Gallery</h2>
 
         <div className="flex items-center gap-2">
           <Button

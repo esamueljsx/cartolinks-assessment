@@ -7,7 +7,7 @@ export interface ToolCardProps {
   icon?: ComponentType<SVGProps<SVGSVGElement>>;
   iconBg?: string;
   isNew?: boolean;
-  className?: string
+  className?: string;
 }
 
 export interface CarouselProps {

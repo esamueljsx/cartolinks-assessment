@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { Button } from "../common/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { carouselItems } from "@/data";
 
 export default function Carousel() {
@@ -17,6 +17,7 @@ export default function Carousel() {
     return () => clearInterval(timer);
   }, []);
 
+  // Scroll to Slide
   const scrollToSlide = (index: number) => {
     if (scrollContainerRef.current) {
       const slideWidth =
@@ -29,22 +30,25 @@ export default function Carousel() {
     }
   };
 
+  // Next Slide
   const nextSlide = () => {
     const nextIndex = (currentSlide + 1) % carouselItems.length;
     scrollToSlide(nextIndex);
   };
 
+  // Previous Slide
   const prevSlide = () => {
     const prevIndex =
       (currentSlide - 1 + carouselItems.length) % carouselItems.length;
     scrollToSlide(prevIndex);
   };
 
+  // Go to Current Slide
   const goToSlide = (index: number) => {
     scrollToSlide(index);
   };
 
-  // Update currentSlide based on scroll position
+  // Handle Scroll
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const slideWidth =
@@ -58,8 +62,8 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-full block space-y-4 mt-28 lg:mt-32">
-      <div className="w-full overflow-hidden">
+    <div className="w-full block mt-24 lg:mt-32">
+      <div className="w-full overflow-hidden mb-3">
         <div
           ref={scrollContainerRef}
           className="snap-x snap-mandatory w-full overflow-x-scroll hide-scroll flex"
@@ -68,7 +72,7 @@ export default function Carousel() {
           {carouselItems.map((slide, index) => (
             <div
               key={index}
-              className="select-none snap-center aspect-video flex-shrink-0 w-full mx-1.5 lg:mx-5.5 relative overflow-hidden rounded-3xl lg:w-[810px] lg:h-[426px] h-[260px]"
+              className="select-none snap-center aspect-video flex-shrink-0 w-full mx-1.5 lg:mx-5.5 relative overflow-hidden rounded-2xl lg:rounded-3xl lg:w-[810px] lg:h-[426px] h-[286px]"
             >
               <Image
                 src={slide.image}
@@ -81,20 +85,22 @@ export default function Carousel() {
               {/* Overlay */}
               <div className="absolute inset-0 flex flex-col justify-end py-4 px-6 text-white lg:px-8 lg:py-6 bg-gradient-to-t from-black/50 to-black/0">
                 <div className="flex flex-col justify-between w-full h-full">
-                  <span className="text-xs font-light tracking-wide">
+                  <span className="text-xs lg:text-sm font-medium tracking-wide">
                     {slide.badge}
                   </span>
 
                   <div className="flex justify-between items-end">
                     <div className="max-w-md">
-                      <h4 className="text-base font-medium sm:text-xl md:text-3xl">
+                      <h4 className="text-lg font-medium sm:text-xl md:text-3xl">
                         {slide.title}
                       </h4>
-                      <p className="mt-1 text-xs lg:text-sm ">
+                      <p className="mt-1 text-xs lg:text-sm leading-4 opacity-90">
                         {slide.description}
                       </p>
                     </div>
-                    <Button className="w-fit rounded-full">
+
+                    {/* Button */}
+                    <Button className="w-fit rounded-full hidden lg:block px-5">
                       {slide.buttonText}
                     </Button>
                   </div>
@@ -122,7 +128,7 @@ export default function Carousel() {
       </div>
 
       {/* Slide controls */}
-      <div className="justify-end flex space-x-2 sm:space-x-3 px-3 sm:px-6 lg:px-8 xl:px-0">
+      <div className="justify-end flex space-x-2">
         <Button
           variant="ghost"
           size="icon"

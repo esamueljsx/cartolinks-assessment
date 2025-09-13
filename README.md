@@ -1,7 +1,7 @@
 # Cartolinks Solution LTD Frontend Assessment
 
 <div align="center">
-  <img src="public/assets/images/banner.webp" alt="Cartolinks UI Banner" width="100%" />
+  <img src="https://res.cloudinary.com/samandcode/image/upload/v1757753276/unnamed_ak34bi.png" alt="Cartolinks Solution LTD Frontend Assessment Banner" width="100%" />
 </div>
 
 A modern and interactive web application showcasing advanced UI/UX patterns and animations. Built with Next.js 14, React, and TypeScript, this project demonstrates the implementation of dynamic carousels, image galleries, and interactive tool cards with smooth animations and transitions.

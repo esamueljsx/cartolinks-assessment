@@ -2,7 +2,7 @@
 import { tools } from "@/data";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-import { Button } from "../common/button"; 
+import { Button } from "../common/button";
 import ToolCard from "../common/tools-card";
 
 export default function Generation() {
@@ -12,12 +12,12 @@ export default function Generation() {
     <section className="py-10">
       {/* Header */}
       <div className="mb-5 flex items-center justify-between">
-        <h2 className="lg:text-xl text-lg font-medium">Generate</h2>
+        <h2 className="text-xl font-medium">Generate</h2>
 
         <Button
           variant="link"
           onClick={() => setShowAll(!showAll)}
-          className=" text-sm font-medium text-[#006eff]/80 hover:text-text-[#006eff]"
+          className="text-sm font-medium text-[#006eff]/80 hover:text-text-[#006eff]"
         >
           {!showAll ? (
             <ChevronDown className="size-5" />
