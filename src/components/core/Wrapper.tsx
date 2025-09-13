@@ -1,9 +1,7 @@
-"use client";
-import React, { ReactNode } from "react";
-import { ThemeProvider } from "../common/theme";
-import Navbar from "./Navbar";
-import { ThemeSwitcher } from "../common/theme-toggle";
-// import Footer from "./Footer";
+'use client'
+import type { ReactNode } from 'react'
+import { ThemeProvider } from '../common/theme'
+import Navbar from './Navbar'
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -11,11 +9,9 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar />
         {children}
-        {/* <ThemeSwitcher /> */}
       </ThemeProvider>
-      {/* <Footer />  */}
     </div>
-  );
-};
+  )
+}
 
-export default Wrapper;
+export default Wrapper

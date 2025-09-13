@@ -1,6 +1,6 @@
-import { ToolCardProps } from "@/types";
-import { Button } from "./button";
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
+import type { ToolCardProps } from '@/types'
+import { Button } from './button'
 
 export default function ToolCard({
   title,
@@ -12,14 +12,14 @@ export default function ToolCard({
 }: ToolCardProps) {
   return (
     <div
-      className={cn("grid grid-cols-[1fr_auto] items-center gap-6", className)}
+      className={cn('grid grid-cols-[1fr_auto] items-center gap-6', className)}
     >
       {/* Icon and Text */}
       <div className="grid grid-cols-[auto_1fr] items-center gap-2.5">
         {Icon && (
           <div
             className={cn(
-              "aspect-square flex size-10.5 flex-shrink-0 items-center justify-center rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10",
+              'aspect-square flex size-10.5 flex-shrink-0 items-center justify-center rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10',
               iconBg,
             )}
           >
@@ -51,5 +51,5 @@ export default function ToolCard({
         Open
       </Button>
     </div>
-  );
+  )
 }

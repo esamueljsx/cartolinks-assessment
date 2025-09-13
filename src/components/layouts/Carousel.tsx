@@ -1,69 +1,69 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
-import { Button } from "../common/button";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { carouselItems } from "@/data";
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+import { carouselItems } from '@/data'
+import { Button } from '../common/button'
 
 export default function Carousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+      nextSlide()
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
 
   // Scroll to Slide
   const scrollToSlide = (index: number) => {
     if (scrollContainerRef.current) {
       const slideWidth =
-        scrollContainerRef.current.scrollWidth / carouselItems.length;
+        scrollContainerRef.current.scrollWidth / carouselItems.length
       scrollContainerRef.current.scrollTo({
         left: slideWidth * index,
-        behavior: "smooth",
-      });
-      setCurrentSlide(index);
+        behavior: 'smooth',
+      })
+      setCurrentSlide(index)
     }
-  };
+  }
 
   // Next Slide
   const nextSlide = () => {
-    const nextIndex = (currentSlide + 1) % carouselItems.length;
-    scrollToSlide(nextIndex);
-  };
+    const nextIndex = (currentSlide + 1) % carouselItems.length
+    scrollToSlide(nextIndex)
+  }
 
   // Previous Slide
   const prevSlide = () => {
     const prevIndex =
-      (currentSlide - 1 + carouselItems.length) % carouselItems.length;
-    scrollToSlide(prevIndex);
-  };
+      (currentSlide - 1 + carouselItems.length) % carouselItems.length
+    scrollToSlide(prevIndex)
+  }
 
   // Go to Current Slide
   const goToSlide = (index: number) => {
-    scrollToSlide(index);
-  };
+    scrollToSlide(index)
+  }
 
   // Handle Scroll
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const slideWidth =
-        scrollContainerRef.current.scrollWidth / carouselItems.length;
-      const scrollLeft = scrollContainerRef.current.scrollLeft;
-      const newIndex = Math.round(scrollLeft / slideWidth);
+        scrollContainerRef.current.scrollWidth / carouselItems.length
+      const scrollLeft = scrollContainerRef.current.scrollLeft
+      const newIndex = Math.round(scrollLeft / slideWidth)
       if (newIndex !== currentSlide) {
-        setCurrentSlide(newIndex);
+        setCurrentSlide(newIndex)
       }
     }
-  };
+  }
 
   return (
     <div className="w-full block mt-24 lg:mt-32">
-      <div className="w-full overflow-hidden mb-3">
+      <div className="w-full    overflow-hidden mb-3">
         <div
           ref={scrollContainerRef}
           className="snap-x snap-mandatory w-full overflow-x-scroll hide-scroll flex"
@@ -94,7 +94,7 @@ export default function Carousel() {
                       <h4 className="text-lg font-medium sm:text-xl md:text-3xl">
                         {slide.title}
                       </h4>
-                      <p className="mt-1 text-xs lg:text-sm leading-4 opacity-90">
+                      <p className="mt-1 text-xs lg:text-sm leading-4 lg:leading-5 opacity-90">
                         {slide.description}
                       </p>
                     </div>
@@ -115,11 +115,12 @@ export default function Carousel() {
       <div className="justify-center flex gap-1.5 sm:gap-2 px-3 sm:px-6 lg:px-8 xl:px-0">
         {carouselItems.map((_, index) => (
           <button
+            type="button"
             key={index}
             className={`size-2 sm:size-2.5 rounded-full transition-colors cursor-pointer ${
               currentSlide === index
-                ? "bg-black dark:bg-white"
-                : "bg-black/30 dark:bg-white/30"
+                ? 'bg-black dark:bg-white'
+                : 'bg-black/30 dark:bg-white/30'
             }`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
@@ -149,5 +150,5 @@ export default function Carousel() {
         </Button>
       </div>
     </div>
-  );
+  )
 }

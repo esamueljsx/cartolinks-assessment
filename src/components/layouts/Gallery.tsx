@@ -1,6 +1,6 @@
-import { User, CreditCard } from "lucide-react";
-import { Button } from "../common/button";
-import Image from "next/image";
+import { CreditCard, User } from 'lucide-react'
+import Image from 'next/image'
+import { Button } from '../common/button'
 
 export function Gallery() {
   return (
@@ -49,5 +49,5 @@ export function Gallery() {
         ))}
       </div>
     </section>
-  );
+  )
 }

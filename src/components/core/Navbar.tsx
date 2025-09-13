@@ -1,4 +1,6 @@
-import Link from "next/link";
+import { ChevronDown } from 'lucide-react'
+import Link from 'next/link'
+import { Button } from '../common/button'
 import {
   AssetsIcon,
   Avatar,
@@ -11,25 +13,23 @@ import {
   RealTime,
   Support,
   VideoIcon,
-} from "../common/icons";
-import { Tabs, TabsList, TabsTrigger } from "../common/tabs";
-import { Button } from "../common/button";
-import { ThemeSwitcher } from "../common/theme-toggle";
-import { ArrowDown, ChevronDown, Bell } from "lucide-react";
+} from '../common/icons'
+import { Tabs, TabsList, TabsTrigger } from '../common/tabs'
+import { ThemeSwitcher } from '../common/theme-toggle'
 
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full">
       <div className="flex items-center justify-between gap-6 py-2.5 px-5 lg:px-7">
         {/* Logo x Dropdown */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 backdrop-blur-2xl p-1.5 rounded-2xl ">
           {/* Logo */}
           <Link href="/" className="block select-none outline-none">
             <Logo className="text-black dark:text-white" />
           </Link>
 
           {/* Dropdown */}
-          <div className="group hidden lg:flex cursor-pointer items-center space-x-2 backdrop-blur-2xl p-1.5 rounded-2xl select-none">
+          <div className="group hidden lg:flex cursor-pointer items-center space-x-2 select-none">
             <Avatar className="size-7" />
             <p className="opacity-80 text-sm">benevolentrimblebat</p>
             <ChevronDown className="group-hover:rotate-180 size-4 transition-all " />
@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

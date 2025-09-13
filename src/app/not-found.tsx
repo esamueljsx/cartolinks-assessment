@@ -1,13 +1,13 @@
-import { Button } from "@/common/button";
-import { NextPageContext } from "next";
-import Link from "next/link";
+import type { NextPageContext } from 'next'
+import Link from 'next/link'
+import { Button } from '@/common/button'
 
 export default function NotFound({ statusCode }: { statusCode?: number }) {
   return (
     <main className="m-auto flex min-h-screen items-center justify-center p-4">
       <div className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-primary/30 text-7xl font-bold">
-          {statusCode ?? "404"}
+          {statusCode ?? '404'}
         </h1>
         <p className="text-primary text-base font-medium">
           {statusCode
@@ -22,11 +22,11 @@ export default function NotFound({ statusCode }: { statusCode?: number }) {
         </Button>
       </div>
     </main>
-  );
+  )
 }
 
 // Handle custom error pages for Next.js
 NotFound.getInitialProps = ({ res, err }: NextPageContext) => {
-  const statusCode = res?.statusCode || err?.statusCode || 404;
-  return { statusCode };
-};
+  const statusCode = res?.statusCode || err?.statusCode || 404
+  return { statusCode }
+}

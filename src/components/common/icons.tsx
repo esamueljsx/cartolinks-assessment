@@ -1,10 +1,9 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-export const Logo = ({ className = "", ...rest }) => {
+export const Logo = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
-      aria-label="Krea Logo"
       width="22"
       height="22"
       viewBox="0 0 24 24"
@@ -12,18 +11,22 @@ export const Logo = ({ className = "", ...rest }) => {
       className={className}
       data-slot="icon"
       fill="currentColor"
+      role="img"
+      aria-label="Krea Logo"
     >
       <path d="M8.34 1.266c1.766-.124 3.324 1.105 3.551 2.802.216 1.612-.887 3.171-2.545 3.536-.415.092-.877.066-1.317.122a4.63 4.63 0 0 0-2.748 1.34l-.008.004-.01-.001-.006-.005-.003-.009q0-.009.005-.016a.04.04 0 0 0 .007-.022 438 438 0 0 1-.01-4.541c.003-1.68 1.33-3.086 3.085-3.21"></path>
       <path d="M8.526 15.305c-2.247-.018-3.858-2.23-3.076-4.3a3.31 3.31 0 0 1 2.757-2.11c.384-.04.845-.03 1.215-.098 1.9-.353 3.368-1.806 3.665-3.657.066-.41.031-.9.128-1.335.449-2.016 2.759-3.147 4.699-2.236 1.011.476 1.69 1.374 1.857 2.447q.051.33.034.818c-.22 5.842-5.21 10.519-11.279 10.47m2.831.93a.04.04 0 0 1-.021-.02l-.001-.006.002-.006q0-.003.003-.004l.006-.003q3.458-.792 5.992-3.185.045-.042.083.007c.27.357.554.74.78 1.106a10.6 10.6 0 0 1 1.585 4.89q.037.53.023.819c-.084 1.705-1.51 3.08-3.31 3.09-1.592.01-2.992-1.077-3.294-2.597-.072-.36-.05-.858-.11-1.238q-.282-1.755-1.715-2.84zm-3.369 6.64c-1.353-.235-2.441-1.286-2.684-2.593a5 5 0 0 1-.05-.817V15.14q0-.021.016-.007c.884.786 1.814 1.266 3.028 1.346l.326.01c1.581.051 2.92 1.087 3.229 2.592.457 2.225-1.557 4.195-3.865 3.793"></path>
     </svg>
-  );
-};
+  )
+}
 
-export const Avatar = ({ className = "", ...rest }) => {
+export const Avatar = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
-      className={cn("rounded-full", className)}
+      role="img"
+      aria-label="Avatar"
+      className={cn('rounded-full', className)}
       data-slot="icon"
       width="128"
       height="128"
@@ -88,10 +91,10 @@ export const Avatar = ({ className = "", ...rest }) => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export const Home = ({ className = "", ...rest }) => {
+export const Home = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -102,16 +105,18 @@ export const Home = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Home"
     >
       <path
         d="M2 11.7354C2 10.4141 2 9.75338 2.18958 9.15972C2.35736 8.63437 2.63195 8.14939 2.99611 7.73524C3.40763 7.26724 3.97416 6.92732 5.10723 6.24748L8.70722 4.08748C9.90443 3.36916 10.503 3.01 11.142 2.86967C11.7073 2.74555 12.2927 2.74555 12.858 2.86967C13.497 3.01 14.0956 3.36916 15.2928 4.08748L18.8928 6.24748C20.0258 6.92732 20.5924 7.26724 21.0039 7.73524C21.3681 8.14939 21.6426 8.63437 21.8104 9.15972C22 9.75338 22 10.4141 22 11.7354V18.9118C22 20.0319 22 20.592 21.782 21.0198C21.5903 21.3961 21.2843 21.7021 20.908 21.8938C20.4802 22.1118 19.9201 22.1118 18.8 22.1118H18.2C17.0799 22.1118 16.5198 22.1118 16.092 21.8938C15.7157 21.7021 15.4097 21.3961 15.218 21.0198C15 20.592 15 20.0319 15 18.9118V15.7118C15 15.1518 15 14.8717 14.891 14.6578C14.7951 14.4697 14.6422 14.3167 14.454 14.2208C14.2401 14.1118 13.9601 14.1118 13.4 14.1118H10.6C10.0399 14.1118 9.75992 14.1118 9.54601 14.2208C9.35785 14.3167 9.20487 14.4697 9.10899 14.6578C9 14.8717 9 15.1518 9 15.7118V18.9118C9 20.0319 9 20.592 8.78201 21.0198C8.59027 21.3961 8.28431 21.7021 7.90798 21.8938C7.48016 22.1118 6.9201 22.1118 5.8 22.1118H5.2C4.0799 22.1118 3.51984 22.1118 3.09202 21.8938C2.71569 21.7021 2.40973 21.3961 2.21799 21.0198C2 20.592 2 20.0319 2 18.9118V11.7354Z"
         fill="currentColor"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const Moon = ({ className = "", ...rest }) => {
+export const Moon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -119,6 +124,8 @@ export const Moon = ({ className = "", ...rest }) => {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      role="img"
+      aria-label="Moon"
     >
       <g id="moon_fill" fill="none" fillRule="evenodd">
         <path d="M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z"></path>
@@ -128,10 +135,10 @@ export const Moon = ({ className = "", ...rest }) => {
         ></path>
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export const Notification = ({ className = "", ...rest }) => {
+export const Notification = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -140,13 +147,15 @@ export const Notification = ({ className = "", ...rest }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 256"
       fill="currentColor"
+      role="img"
+      aria-label="Notification"
     >
       <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216Z"></path>
     </svg>
-  );
-};
+  )
+}
 
-export const Support = ({ className = "", ...rest }) => {
+export const Support = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -155,13 +164,15 @@ export const Support = ({ className = "", ...rest }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 256"
       fill="currentColor"
+      role="img"
+      aria-label="Support"
     >
       <path d="M204.73,51.85A108.07,108.07,0,0,0,20,128v56a28,28,0,0,0,28,28H64a28,28,0,0,0,28-28V144a28,28,0,0,0-28-28H44.84A84.05,84.05,0,0,1,128,44h.64a83.7,83.7,0,0,1,82.52,72H192a28,28,0,0,0-28,28v40a28,28,0,0,0,28,28h19.6A20,20,0,0,1,192,228H136a12,12,0,0,0,0,24h56a44.05,44.05,0,0,0,44-44V128A107.34,107.34,0,0,0,204.73,51.85ZM64,140a4,4,0,0,1,4,4v40a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V140Zm124,44V144a4,4,0,0,1,4-4h20v48H192A4,4,0,0,1,188,184Z"></path>
     </svg>
-  );
-};
+  )
+}
 
-export const Sun = ({ className = "", ...rest }) => {
+export const Sun = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -169,6 +180,8 @@ export const Sun = ({ className = "", ...rest }) => {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      role="img"
+      aria-label="Sun"
     >
       <g id="sun_fill" fill="none">
         <path d="M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z"></path>
@@ -178,10 +191,10 @@ export const Sun = ({ className = "", ...rest }) => {
         ></path>
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export const VideoIcon = ({ className = "", ...rest }) => {
+export const VideoIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -190,6 +203,8 @@ export const VideoIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="VideoIcon"
     >
       <path
         fillRule="evenodd"
@@ -212,10 +227,10 @@ export const VideoIcon = ({ className = "", ...rest }) => {
         fill="currentColor"
       ></rect>
     </svg>
-  );
-};
+  )
+}
 
-export const ImageIcon = ({ className = "", ...rest }) => {
+export const ImageIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -224,6 +239,8 @@ export const ImageIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="ImageIcon"
     >
       <path
         fillRule="evenodd"
@@ -249,10 +266,10 @@ export const ImageIcon = ({ className = "", ...rest }) => {
         strokeLinejoin="round"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const Enhancer = ({ className = "", ...rest }) => {
+export const Enhancer = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -261,6 +278,8 @@ export const Enhancer = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Enhancer"
     >
       <path
         d="M4.49935 13.0083C4.34395 13.5194 3.94455 13.9195 3.43425 14.075C3.94455 14.2306 4.34395 14.6306 4.49935 15.1417C4.65465 14.6306 5.05405 14.2306 5.56445 14.075C5.05405 13.9195 4.65465 13.5194 4.49935 13.0083Z"
@@ -305,10 +324,10 @@ export const Enhancer = ({ className = "", ...rest }) => {
         fill="currentColor"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const RealTime = ({ className = "", ...rest }) => {
+export const RealTime = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -317,6 +336,8 @@ export const RealTime = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="RealTime"
     >
       <path
         d="M14.9472 14.4612C14.6244 14.8306 14.4629 15.0153 14.2819 15.1777C14.121 15.3219 13.9487 15.4529 13.7667 15.5693C13.5618 15.7004 13.3384 15.8077 12.8914 16.0223C11.8174 16.538 11.2804 16.7959 10.9271 16.705C10.6205 16.626 10.3693 16.4065 10.25 16.1132C10.1126 15.7753 10.2963 15.2086 10.6635 14.0752C10.8164 13.6035 10.8928 13.3677 10.9952 13.1471C11.0863 12.9511 11.193 12.7629 11.3144 12.5842C11.4511 12.383 11.6125 12.1983 11.9354 11.8289L17.0023 6.03138C17.076 5.94704 17.1129 5.90487 17.1574 5.88701C17.1966 5.87129 17.2398 5.86839 17.2807 5.87871C17.3273 5.89045 17.3695 5.92731 17.4538 6.00102L19.9838 8.21213C20.0681 8.28584 20.1103 8.3227 20.1281 8.36727C20.1438 8.40647 20.1467 8.44964 20.1364 8.4906C20.1247 8.53715 20.0878 8.57932 20.0141 8.66366L14.9472 14.4612Z"
@@ -334,10 +355,10 @@ export const RealTime = ({ className = "", ...rest }) => {
         strokeLinejoin="round"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const EditIcon = ({ className = "", ...rest }) => {
+export const EditIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -346,6 +367,8 @@ export const EditIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="EditIcon"
     >
       <path
         d="M12 2.854L12 5.51603"
@@ -377,10 +400,10 @@ export const EditIcon = ({ className = "", ...rest }) => {
         strokeLinecap="round"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const LipSync = ({ className = "", ...rest }) => {
+export const LipSync = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -389,6 +412,8 @@ export const LipSync = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="LipSync"
     >
       <path
         d="M16.4998 21.174C15.4998 20.5 14.3718 20 12.9998 20C10.9418 20 9.07179 22.356 6.99979 22C4.92779 21.644 4.22479 18.631 5.49979 17.5"
@@ -403,10 +428,10 @@ export const LipSync = ({ className = "", ...rest }) => {
       ></path>
       <circle cx="16.5" cy="6.5" r="5.5" fill="currentColor"></circle>
     </svg>
-  );
-};
+  )
+}
 
-export const AssetsIcon = ({ className = "", ...rest }) => {
+export const AssetsIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -415,6 +440,8 @@ export const AssetsIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="AssetsIcon"
     >
       <path d="M3 5C3 4.45 3.45 4 4 4H9.17C9.58 4 9.95 4.21 10.14 4.55L10.86 5.89C11.05 6.23 11.42 6.44 11.83 6.44H20C20.55 6.44 21 6.89 21 7.44V11C21 11.55 20.55 12 20 12H4C3.45 12 3 11.55 3 11V5Z"></path>
       <rect x="3" y="7" width="18" height="12" rx="1"></rect>
@@ -427,10 +454,10 @@ export const AssetsIcon = ({ className = "", ...rest }) => {
         opacity="0.5"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const MotionIcon = ({ className = "", ...rest }) => {
+export const MotionIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -439,6 +466,8 @@ export const MotionIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="MotionIcon"
     >
       <path
         d="M23.6904 14.625C24.4364 14.625 25.1517 14.3287 25.6792 13.8012C26.2066 13.2738 26.5029 12.5584 26.5029 11.8125C26.5029 11.0666 26.2066 10.3512 25.6792 9.82376C25.1517 9.29632 24.4364 9 23.6904 9C22.9445 9 22.2291 9.29632 21.7017 9.82376C21.1742 10.3512 20.8779 11.0666 20.8779 11.8125C20.8779 12.5584 21.1742 13.2738 21.7017 13.8012C22.2291 14.3287 22.9445 14.625 23.6904 14.625Z"
@@ -449,10 +478,10 @@ export const MotionIcon = ({ className = "", ...rest }) => {
         fill="currentColor"
       ></path>
     </svg>
-  );
-};
+  )
+}
 
-export const TrainIcon = ({ className = "", ...rest }) => {
+export const TrainIcon = ({ className = '', ...rest }) => {
   return (
     <svg
       {...rest}
@@ -461,15 +490,17 @@ export const TrainIcon = ({ className = "", ...rest }) => {
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="TrainIcon"
     >
       <g fill="currentColor">
         <path d="M14 6H6v8h8z"></path>
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M9.25 3V1.75a.75.75 0 0 1 1.5 0V3h1.5V1.75a.75.75 0 0 1 1.5 0V3h.5A2.75 2.75 0 0 1 17 5.75v.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v.5A2.75 2.75 0 0 1 14.25 17h-.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-.5A2.75 2.75 0 0 1 3 14.25v-.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-.5A2.75 2.75 0 0 1 5.75 3h.5V1.75a.75.75 0 0 1 1.5 0V3zM4.5 5.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v8.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         ></path>
       </g>
     </svg>
-  );
-};
+  )
+}
