@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import { suisseIntl } from "./fonts";
 import { ReactLenis } from "@/lib/lenis";
 import type { Metadata } from "next";
-import Wrapper from "@/layouts/Wrapper";
+import Wrapper from "@/components/core/Wrapper";
 
 export const metadata: Metadata = {
   title: "Krea AI - Cartolinks Solution LTD",

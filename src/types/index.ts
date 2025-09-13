@@ -1,20 +1,20 @@
 import { StaticImageData } from "next/image";
-import { JSX } from "react";
+import { ComponentType, SVGProps } from "react";
 
-export type Tools = {
-  icon?: JSX.Element;
+export interface ToolCardProps {
   title: string;
   description: string;
-  action: string;
-  bg: string;
+  icon?: ComponentType<SVGProps<SVGSVGElement>>;
+  iconBg?: string;
   isNew?: boolean;
-};
+  className?: string
+}
 
-export type Slider = {
+export interface CarouselProps {
   id: number;
   title: string;
   description: string;
   buttonText: string;
   image: StaticImageData;
   badge: string;
-};
+}

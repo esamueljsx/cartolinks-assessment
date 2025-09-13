@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "./icons";
 import { Button } from "./button";
 
 export function ThemeSwitcher() {
@@ -26,9 +26,9 @@ export function ThemeSwitcher() {
       className="bg-[#f5f5f5] dark:bg-[#202020]"
     >
       {theme === "dark" ? (
-        <Sun className="size-[1.2rem] text-yellow-500" />
+        <Moon className="size-5" />
       ) : (
-        <Moon className="text-primary size-[1.2rem]" />
+        <Sun className="size-5" />
       )}
     </Button>
   );

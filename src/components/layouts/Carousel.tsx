@@ -1,75 +1,102 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Button } from "../common/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { carouselItems } from "@/data";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+      nextSlide();
     }, 5000);
     return () => clearInterval(timer);
-  }, [carouselItems.length]);
+  }, []);
+
+  const scrollToSlide = (index: number) => {
+    if (scrollContainerRef.current) {
+      const slideWidth =
+        scrollContainerRef.current.scrollWidth / carouselItems.length;
+      scrollContainerRef.current.scrollTo({
+        left: slideWidth * index,
+        behavior: "smooth",
+      });
+      setCurrentSlide(index);
+    }
+  };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+    const nextIndex = (currentSlide + 1) % carouselItems.length;
+    scrollToSlide(nextIndex);
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + carouselItems.length) % carouselItems.length,
-    );
+    const prevIndex =
+      (currentSlide - 1 + carouselItems.length) % carouselItems.length;
+    scrollToSlide(prevIndex);
   };
 
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+    scrollToSlide(index);
+  };
+
+  // Update currentSlide based on scroll position
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const slideWidth =
+        scrollContainerRef.current.scrollWidth / carouselItems.length;
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const newIndex = Math.round(scrollLeft / slideWidth);
+      if (newIndex !== currentSlide) {
+        setCurrentSlide(newIndex);
+      }
+    }
   };
 
   return (
-    <div className="relative  w-full flex flex-col gap-4 mt-20">
+    <div className="w-full block space-y-4 mt-28 lg:mt-32">
       <div className="w-full overflow-hidden">
         <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{
-            transform: `translateX(-${currentSlide * 100}%)`,
-          }}
+          ref={scrollContainerRef}
+          className="snap-x snap-mandatory w-full overflow-x-scroll hide-scroll flex"
+          onScroll={handleScroll}
         >
           {carouselItems.map((slide, index) => (
             <div
-              key={slide.id}
-              className="relative w-full flex-shrink-0 overflow-hidden rounded-2xl shadow-lg"
+              key={index}
+              className="select-none snap-center aspect-video flex-shrink-0 w-full mx-1.5 lg:mx-5.5 relative overflow-hidden rounded-3xl lg:w-[810px] lg:h-[426px] h-[260px]"
             >
               <Image
                 src={slide.image}
                 alt={slide.title}
-                width={1000}
-                height={1000}
-                className="h-[300px] w-full rounded-2xl object-cover sm:h-[400px] md:h-[450px]"
+                width={810}
+                height={426}
+                className="w-full h-full object-cover"
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 flex flex-col justify-end px-4 py-4 text-white sm:px-8 sm:py-6 bg-black/5">
-                {/* Title in the middle */}
+              <div className="absolute inset-0 flex flex-col justify-end py-4 px-6 text-white lg:px-8 lg:py-6 bg-gradient-to-t from-black/50 to-black/0">
+                <div className="flex flex-col justify-between w-full h-full">
+                  <span className="text-xs font-light tracking-wide">
+                    {slide.badge}
+                  </span>
 
-                {/* Description + button at bottom */}
-                <div className="flex flex-col justify-end space-y-2 sm:space-y-3">
-                  {slide.title && (
-                    <h4 className="text-base font-semibold sm:text-lg md:text-2xl">
-                      {slide.title}
-                    </h4>
-                  )}
-                  <div className="flex w-full justify-between">
-                    <p className="max-w-[14rem] text-xs text-gray-200 sm:max-w-[20rem] sm:text-sm md:text-base">
-                      {slide.description}
-                    </p>
-                    <button className="w-fit rounded-full bg-white px-3 py-1 text-xs font-semibold text-black transition-colors hover:bg-gray-200 sm:px-4 sm:py-2 sm:text-sm md:px-6 md:text-base">
+                  <div className="flex justify-between items-end">
+                    <div className="max-w-md">
+                      <h4 className="text-base font-medium sm:text-xl md:text-3xl">
+                        {slide.title}
+                      </h4>
+                      <p className="mt-1 text-xs lg:text-sm ">
+                        {slide.description}
+                      </p>
+                    </div>
+                    <Button className="w-fit rounded-full">
                       {slide.buttonText}
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -79,33 +106,40 @@ export default function Carousel() {
       </div>
 
       {/* Dots indicator */}
-      <div className="justify-center flex gap-2">
+      <div className="justify-center flex gap-1.5 sm:gap-2 px-3 sm:px-6 lg:px-8 xl:px-0">
         {carouselItems.map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 rounded-full transition-colors cursor-pointer ${
-              currentSlide === index ? "bg-white" : "bg-white/30"
+            className={`size-2 sm:size-2.5 rounded-full transition-colors cursor-pointer ${
+              currentSlide === index
+                ? "bg-black dark:bg-white"
+                : "bg-black/30 dark:bg-white/30"
             }`}
             onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Prev/Next controls */}
-      <div className="justify-end flex space-x-3">
+      {/* Slide controls */}
+      <div className="justify-end flex space-x-2 sm:space-x-3 px-3 sm:px-6 lg:px-8 xl:px-0">
         <Button
+          variant="ghost"
           size="icon"
           onClick={prevSlide}
-          className="rounded-full bg-gray-200 p-2 text-gray-700 hover:bg-gray-300 sm:p-3"
+          className="rounded-full bg-[#f5f5f5] dark:bg-[#202020] p-1.5 sm:p-2 lg:p-3 text-black dark:text-white"
+          aria-label="Previous slide"
         >
-          <ArrowLeft size={20} />
+          <ChevronLeft size={16} />
         </Button>
         <Button
+          variant="ghost"
           size="icon"
           onClick={nextSlide}
-          className="rounded-full bg-gray-200 p-2 text-gray-700 hover:bg-gray-300 sm:p-3"
+          className="rounded-full p-1.5 sm:p-2  text-black dark:text-white bg-[#f5f5f5] dark:bg-[#202020]"
+          aria-label="Next slide"
         >
-          <ArrowRight size={20} />
+          <ChevronRight size={16} />
         </Button>
       </div>
     </div>

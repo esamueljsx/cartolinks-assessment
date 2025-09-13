@@ -1,11 +1,14 @@
-import { User, Printer } from "lucide-react";
+import { User, CreditCard } from "lucide-react";
 import { Button } from "../common/button";
+import Image from "next/image";
 
 export function Gallery() {
   return (
-    <section className="mb-8">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl">Gallery</h2>
+    <section className="py-10">
+      {/* Header */}
+      <div className="mb-5 flex items-center justify-between">
+        <h2 className="lg:text-xl text-lg font-medium">Gallery</h2>
+
         <div className="flex items-center gap-2">
           <Button
             variant="ghost"
@@ -13,31 +16,33 @@ export function Gallery() {
             className="text-gray-400 hover:text-white"
           >
             <User className="w-4 h-4 mr-2" />
-            User
+            Legal
           </Button>
           <Button
             variant="ghost"
             size="sm"
             className="text-gray-400 hover:text-white"
           >
-            <Printer className="w-4 h-4 mr-2" />
+            <CreditCard className="w-4 h-4 mr-2" />
             Pricing
           </Button>
         </div>
       </div>
 
-      {/* Gallery grid would go here */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        {Array.from({ length: 12 }).map((_, index) => (
+      {/* Gallery Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {Array.from({ length: 8 }).map((_, index) => (
           <div
             key={index}
-            className="aspect-square bg-gray-900/50 border border-gray-800 rounded-lg overflow-hidden hover:border-gray-700 transition-colors cursor-pointer"
+            className="aspect-square bg-black/5 dark:bg-white/5  rounded-lg overflow-hidden  transition-colors cursor-pointer"
           >
-            <img
-              src={`/placeholder.svg?height=200&width=200&query=AI generated art ${
+            <Image
+              src={`/placeholder.svg?height=160&width=160&query=Krea AI Art ${
                 index + 1
               }`}
-              alt={`Gallery item ${index + 1}`}
+              alt={`Krea AI Art ${index + 1}`}
+              width={160}
+              height={160}
               className="w-full h-full object-cover"
             />
           </div>
