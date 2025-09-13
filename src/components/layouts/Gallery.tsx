@@ -1,6 +1,6 @@
-import { CreditCard, User } from 'lucide-react'
-import Image from 'next/image'
-import { Button } from '../common/button'
+import Image from "next/image";
+import { Button } from "../common/button";
+import { CreditCard, Newspaper } from "../common/icons";
 
 export function Gallery() {
   return (
@@ -10,31 +10,23 @@ export function Gallery() {
         <h2 className="text-xl font-medium">Gallery</h2>
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-gray-400 hover:text-white"
-          >
-            <User className="w-4 h-4 mr-2" />
+          <Button variant="ghost" className="bg-[#f5f5f5] dark:bg-[#202020]">
+            <Newspaper className="size-5" />
             Legal
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-gray-400 hover:text-white"
-          >
-            <CreditCard className="w-4 h-4 mr-2" />
+          <Button variant="ghost" className="bg-[#f5f5f5] dark:bg-[#202020]">
+            <CreditCard className="size-5" />
             Pricing
           </Button>
         </div>
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-6">
         {Array.from({ length: 8 }).map((_, index) => (
           <div
             key={index}
-            className="aspect-square bg-black/5 dark:bg-white/5  rounded-lg overflow-hidden  transition-colors cursor-pointer"
+            className="ring-3 ring-black/10 dark:ring-white/10 aspect-square bg-black/5 dark:bg-white/5 rounded-xl overflow-hidden"
           >
             <Image
               src={`/placeholder.svg?height=160&width=160&query=Krea AI Art ${
@@ -49,5 +41,5 @@ export function Gallery() {
         ))}
       </div>
     </section>
-  )
+  );
 }

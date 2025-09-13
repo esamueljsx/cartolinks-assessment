@@ -19,7 +19,7 @@ export default function ToolCard({
         {Icon && (
           <div
             className={cn(
-              'aspect-square flex size-10.5 flex-shrink-0 items-center justify-center rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10',
+              'aspect-square flex size-12 flex-shrink-0 items-center justify-center rounded-[10px] inset-ring-[0.5px] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),inset_0_1px_5px_rgba(255,255,255,0.1)] inset-ring-black/10',
               iconBg,
             )}
           >

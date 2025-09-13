@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
-export const Logo = ({ className = '', ...rest }) => {
+export const Logo = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -17,16 +17,50 @@ export const Logo = ({ className = '', ...rest }) => {
       <path d="M8.34 1.266c1.766-.124 3.324 1.105 3.551 2.802.216 1.612-.887 3.171-2.545 3.536-.415.092-.877.066-1.317.122a4.63 4.63 0 0 0-2.748 1.34l-.008.004-.01-.001-.006-.005-.003-.009q0-.009.005-.016a.04.04 0 0 0 .007-.022 438 438 0 0 1-.01-4.541c.003-1.68 1.33-3.086 3.085-3.21"></path>
       <path d="M8.526 15.305c-2.247-.018-3.858-2.23-3.076-4.3a3.31 3.31 0 0 1 2.757-2.11c.384-.04.845-.03 1.215-.098 1.9-.353 3.368-1.806 3.665-3.657.066-.41.031-.9.128-1.335.449-2.016 2.759-3.147 4.699-2.236 1.011.476 1.69 1.374 1.857 2.447q.051.33.034.818c-.22 5.842-5.21 10.519-11.279 10.47m2.831.93a.04.04 0 0 1-.021-.02l-.001-.006.002-.006q0-.003.003-.004l.006-.003q3.458-.792 5.992-3.185.045-.042.083.007c.27.357.554.74.78 1.106a10.6 10.6 0 0 1 1.585 4.89q.037.53.023.819c-.084 1.705-1.51 3.08-3.31 3.09-1.592.01-2.992-1.077-3.294-2.597-.072-.36-.05-.858-.11-1.238q-.282-1.755-1.715-2.84zm-3.369 6.64c-1.353-.235-2.441-1.286-2.684-2.593a5 5 0 0 1-.05-.817V15.14q0-.021.016-.007c.884.786 1.814 1.266 3.028 1.346l.326.01c1.581.051 2.92 1.087 3.229 2.592.457 2.225-1.557 4.195-3.865 3.793"></path>
     </svg>
-  )
-}
+  );
+};
 
-export const Avatar = ({ className = '', ...rest }) => {
+export const CreditCard = ({ className = "", ...rest }) => {
+  return (
+    <svg
+      {...rest}
+      viewBox="0 0 256 256"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      data-slot="icon"
+      fill="currentColor"
+      role="img"
+      aria-label="Credit Card"
+    >
+      <path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM136,176H120a8,8,0,0,1,0-16h16a8,8,0,0,1,0,16Zm64,0H168a8,8,0,0,1,0-16h32a8,8,0,0,1,0,16ZM32,88V64H224V88Z"></path>
+    </svg>
+  );
+};
+
+export const Newspaper = ({ className = "", ...rest }) => {
+  return (
+    <svg
+      {...rest}
+      viewBox="0 0 256 256"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      data-slot="icon"
+      fill="currentColor"
+      role="img"
+      aria-label="Newspaper"
+    >
+      <path d="M216,48H56A16,16,0,0,0,40,64V184a8,8,0,0,1-16,0V88A8,8,0,0,0,8,88v96.11A24,24,0,0,0,32,208H208a24,24,0,0,0,24-24V64A16,16,0,0,0,216,48ZM176,152H96a8,8,0,0,1,0-16h80a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h80a8,8,0,0,1,0,16Z"></path>
+    </svg>
+  );
+};
+
+export const Avatar = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
       role="img"
       aria-label="Avatar"
-      className={cn('rounded-full', className)}
+      className={cn("rounded-full", className)}
       data-slot="icon"
       width="128"
       height="128"
@@ -91,10 +125,10 @@ export const Avatar = ({ className = '', ...rest }) => {
         />
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export const Home = ({ className = '', ...rest }) => {
+export const Home = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -113,10 +147,10 @@ export const Home = ({ className = '', ...rest }) => {
         fill="currentColor"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const Moon = ({ className = '', ...rest }) => {
+export const Moon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -135,10 +169,10 @@ export const Moon = ({ className = '', ...rest }) => {
         ></path>
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export const Notification = ({ className = '', ...rest }) => {
+export const Notification = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -152,10 +186,10 @@ export const Notification = ({ className = '', ...rest }) => {
     >
       <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216Z"></path>
     </svg>
-  )
-}
+  );
+};
 
-export const Support = ({ className = '', ...rest }) => {
+export const Support = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -169,10 +203,10 @@ export const Support = ({ className = '', ...rest }) => {
     >
       <path d="M204.73,51.85A108.07,108.07,0,0,0,20,128v56a28,28,0,0,0,28,28H64a28,28,0,0,0,28-28V144a28,28,0,0,0-28-28H44.84A84.05,84.05,0,0,1,128,44h.64a83.7,83.7,0,0,1,82.52,72H192a28,28,0,0,0-28,28v40a28,28,0,0,0,28,28h19.6A20,20,0,0,1,192,228H136a12,12,0,0,0,0,24h56a44.05,44.05,0,0,0,44-44V128A107.34,107.34,0,0,0,204.73,51.85ZM64,140a4,4,0,0,1,4,4v40a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V140Zm124,44V144a4,4,0,0,1,4-4h20v48H192A4,4,0,0,1,188,184Z"></path>
     </svg>
-  )
-}
+  );
+};
 
-export const Sun = ({ className = '', ...rest }) => {
+export const Sun = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -191,10 +225,10 @@ export const Sun = ({ className = '', ...rest }) => {
         ></path>
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export const VideoIcon = ({ className = '', ...rest }) => {
+export const VideoIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -227,10 +261,10 @@ export const VideoIcon = ({ className = '', ...rest }) => {
         fill="currentColor"
       ></rect>
     </svg>
-  )
-}
+  );
+};
 
-export const ImageIcon = ({ className = '', ...rest }) => {
+export const ImageIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -266,10 +300,10 @@ export const ImageIcon = ({ className = '', ...rest }) => {
         strokeLinejoin="round"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const Enhancer = ({ className = '', ...rest }) => {
+export const Enhancer = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -324,10 +358,10 @@ export const Enhancer = ({ className = '', ...rest }) => {
         fill="currentColor"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const RealTime = ({ className = '', ...rest }) => {
+export const RealTime = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -355,10 +389,10 @@ export const RealTime = ({ className = '', ...rest }) => {
         strokeLinejoin="round"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const EditIcon = ({ className = '', ...rest }) => {
+export const EditIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -400,10 +434,10 @@ export const EditIcon = ({ className = '', ...rest }) => {
         strokeLinecap="round"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const LipSync = ({ className = '', ...rest }) => {
+export const LipSync = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -428,10 +462,10 @@ export const LipSync = ({ className = '', ...rest }) => {
       ></path>
       <circle cx="16.5" cy="6.5" r="5.5" fill="currentColor"></circle>
     </svg>
-  )
-}
+  );
+};
 
-export const AssetsIcon = ({ className = '', ...rest }) => {
+export const AssetsIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -454,10 +488,10 @@ export const AssetsIcon = ({ className = '', ...rest }) => {
         opacity="0.5"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const MotionIcon = ({ className = '', ...rest }) => {
+export const MotionIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -478,10 +512,10 @@ export const MotionIcon = ({ className = '', ...rest }) => {
         fill="currentColor"
       ></path>
     </svg>
-  )
-}
+  );
+};
 
-export const TrainIcon = ({ className = '', ...rest }) => {
+export const TrainIcon = ({ className = "", ...rest }) => {
   return (
     <svg
       {...rest}
@@ -502,5 +536,5 @@ export const TrainIcon = ({ className = '', ...rest }) => {
         ></path>
       </g>
     </svg>
-  )
-}
+  );
+};
