@@ -30,9 +30,9 @@ export default function Generation() {
 
       {/* Grid of Tools */}
       <div className="grid grid-cols-1 gap-5 lg:gap-6 md:grid-cols-3 lg:grid-cols-4 items-center">
-        {tools.map((tool, index) => (
+        {tools.map((tool) => (
           <ToolCard
-            key={index}
+            key={tool.title}
             title={tool.title}
             description={tool.description}
             icon={tool.icon}

@@ -1,10 +1,10 @@
 import type { StaticImageData } from 'next/image'
-import type { ComponentType, SVGProps } from 'react'
+import type { ReactNode } from 'react'
 
 export interface ToolCardProps {
   title: string
   description: string
-  icon?: ComponentType<SVGProps<SVGSVGElement>>
+  icon?: ReactNode
   iconBg?: string
   isNew?: boolean
   className?: string

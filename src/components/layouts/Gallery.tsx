@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { Button } from "../common/button";
-import { CreditCard, Newspaper } from "../common/icons";
+import Image from 'next/image'
+import { Button } from '../common/button'
+import { CreditCard, Newspaper } from '../common/icons'
 
 export function Gallery() {
   return (
@@ -41,5 +41,5 @@ export function Gallery() {
         ))}
       </div>
     </section>
-  );
+  )
 }

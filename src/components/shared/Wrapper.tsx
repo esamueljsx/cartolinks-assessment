@@ -6,7 +6,12 @@ import Navbar from './Navbar'
 const Wrapper = ({ children }: { children: ReactNode }) => {
   return (
     <div className="mx-auto w-full max-w-screen p-5">
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <Navbar />
         {children}
       </ThemeProvider>

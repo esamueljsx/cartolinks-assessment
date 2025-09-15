@@ -21,11 +21,11 @@ export function ThemeSwitcher() {
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
       className="bg-[#f5f5f5] dark:bg-[#202020]"
     >
-      {theme === 'dark' ? (
+      {theme === 'light' ? (
         <Moon className="size-5" />
       ) : (
         <Sun className="size-5" />

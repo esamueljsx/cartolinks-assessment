@@ -23,7 +23,7 @@ export default function ToolCard({
               iconBg,
             )}
           >
-            <Icon className="size-6 text-white" />
+            {Icon}
           </div>
         )}
 

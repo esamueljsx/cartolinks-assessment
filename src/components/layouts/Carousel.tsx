@@ -13,7 +13,7 @@ export default function Carousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide()
-    }, 5000)
+    }, 1000)
     return () => clearInterval(timer)
   }, [])
 
@@ -62,16 +62,16 @@ export default function Carousel() {
   }
 
   return (
-    <div className="w-full block mt-24 lg:mt-32">
-      <div className="w-full    overflow-hidden mb-3">
+    <div className="w-full block mt-20 lg:mt-32">
+      <div className="w-full overflow-hidden mb-3">
         <div
           ref={scrollContainerRef}
           className="snap-x snap-mandatory w-full overflow-x-scroll hide-scroll flex"
           onScroll={handleScroll}
         >
-          {carouselItems.map((slide, index) => (
+          {carouselItems.map((slide) => (
             <div
-              key={index}
+              key={slide.id}
               className="select-none snap-center aspect-video flex-shrink-0 w-full mx-1.5 lg:mx-5.5 relative overflow-hidden rounded-2xl lg:rounded-3xl lg:w-[810px] lg:h-[426px] h-[286px]"
             >
               <Image
@@ -116,7 +116,7 @@ export default function Carousel() {
         {carouselItems.map((_, index) => (
           <button
             type="button"
-            key={index}
+            key={_.id}
             className={`size-2 sm:size-2.5 rounded-full transition-colors cursor-pointer ${
               currentSlide === index
                 ? 'bg-black dark:bg-white'

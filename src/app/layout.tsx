@@ -1,7 +1,7 @@
 import '../styles/tailwind.css'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
-import Wrapper from '@/components/core/Wrapper'
+import Wrapper from '@/components/shared/Wrapper'
 import { ReactLenis } from '@/lib/lenis'
 import { suisseIntl } from './fonts'
 
