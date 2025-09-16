@@ -29,7 +29,7 @@ export function Gallery() {
             className="ring-3 ring-black/10 dark:ring-white/10 aspect-square bg-black/5 dark:bg-white/5 rounded-xl overflow-hidden"
           >
             <Image
-              src={`/placeholder.svg?height=160&width=160&query=Krea AI Art ${
+              src={`https://placehold.co/160/transparent/1010100A?font=raleway&text=Krea+AI+Art ${
                 index + 1
               }`}
               alt={`Krea AI Art ${index + 1}`}
@@ -41,5 +41,5 @@ export function Gallery() {
         ))}
       </div>
     </section>
-  )
+  );
 }

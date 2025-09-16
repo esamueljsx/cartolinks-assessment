@@ -2,6 +2,7 @@ import slide1 from '@/assets/images/slide1.webp'
 import slide2 from '@/assets/images/slide2.webp'
 import slide3 from '@/assets/images/slide3.webp'
 import slide4 from '@/assets/images/slide4.webp'
+import slide5 from '@/assets/images/slide5.webp'
 import {
   EditIcon,
   Enhancer,
@@ -73,40 +74,76 @@ export const tools: ToolCardProps[] = [
 export const carouselItems: CarouselProps[] = [
   {
     id: 1,
-    title: 'WAN 2.2 Image generation',
+    title: "WAN 2.2 Image generation",
     description:
-      'Generate complex images with the brand new and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.',
-    buttonText: 'Try WAN 2.2',
+      "Generate complex images with the brand new and powerful WAN 2.2 model. Exceptional prompt adherence and ultra-realistic textures.",
+    buttonText: "Try WAN 2.2",
     image: slide1,
-    badge: 'NEW IMAGE MODEL',
+    badge: "NEW IMAGE MODEL",
   },
   {
     id: 2,
-    title: 'FLUX.1 Krea',
+    title: "FLUX.1 Krea",
     description:
       "We're making the weights to our FLUX.1 Krea model open-source. Download and run our model weights, read the technical report, or generate with it in Krea Image.",
-    buttonText: 'Try FLUX.1',
+    buttonText: "Try FLUX.1",
     image: slide2,
-    badge: 'NEW IMAGE MODEL',
+    badge: "NEW IMAGE MODEL",
   },
   {
     id: 3,
-    title: 'Open Source',
+    title: "Real-Time Video Generation",
     description:
-      'Explore our collection of open source models and tools. Build, customize, and deploy your own AI solutions.',
-    buttonText: 'Explore',
+      "Announcing Realtime Video. Generate videos in real-time. Fully frame-consistent, controllable video clips.",
+    buttonText: "Explore",
     image: slide3,
-    badge: 'OPEN SOURCE',
+    badge: "OPEN SOURCE",
   },
   {
     id: 4,
-    title: 'Seedream 4.0',
+    title: "Seedream 4.0",
     description:
-      'Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.',
-    buttonText: 'Start Generating',
+      "Try the brand new and record-breaking image generation model Seedream 4.0 by ByteDance.",
+    buttonText: "Start Generating",
     image: slide4,
-    badge: 'OPEN SOURCE',
+    badge: "OPEN SOURCE",
   },
-]
+  {
+    id: 5,
+    title: "Introducing Motion Transfer",
+    description:
+      "Bring motion into your characters. Upload any image, record a video of yourself, and make your characters smile, talk, and dance. Powered by Runway Act.",
+    buttonText: "Start Generating",
+    image: slide5,
+    badge: "OPEN SOURCE",
+  },
+  {
+    id: 6,
+    title: "DreamFusion 3D Model",
+    description:
+      "Transform your 2D images into stunning 3D models with DreamFusion. Experience seamless text-to-3D generation for creative and professional projects.",
+    buttonText: "Try DreamFusion",
+    image: "https://placehold.co/810x426?font=raleway&text=DreamFusion+3D",
+    badge: "NEW AI MODEL",
+  },
+  {
+    id: 7,
+    title: "MuseNet Audio Synthesis",
+    description:
+      "Compose original music and soundscapes with MuseNet. Generate high-fidelity audio tracks from simple prompts using advanced AI.",
+    buttonText: "Generate Audio",
+    image: "https://placehold.co/810x426?font=raleway&text=MuseNet+Audio",
+    badge: "AI AUDIO",
+  },
+  {
+    id: 8,
+    title: "PolyBrush 3D Sculptor",
+    description:
+      "Effortlessly sculpt and paint 3D models from text or sketches. PolyBrush uses AI to turn your ideas into detailed, ready-to-use 3D assets for games, art, and animation.",
+    buttonText: "Create 3D Model",
+    image: "https://placehold.co/810x426?font=raleway&text=PolyBrush+3D",
+    badge: "AI 3D MODEL",
+  },
+];
 
 export const profiles = ['benevolentrimblebat', 'designteamworkspace']

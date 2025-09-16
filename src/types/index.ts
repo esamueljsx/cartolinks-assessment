@@ -1,20 +1,20 @@
-import type { StaticImageData } from 'next/image'
-import type { ReactNode } from 'react'
+import type { StaticImageData } from "next/image";
+import type { ReactNode } from "react";
 
 export interface ToolCardProps {
-  title: string
-  description: string
-  icon?: ReactNode
-  iconBg?: string
-  isNew?: boolean
-  className?: string
+  title: string;
+  description: string;
+  icon?: ReactNode;
+  iconBg?: string;
+  isNew?: boolean;
+  className?: string;
 }
 
 export interface CarouselProps {
-  id: number
-  title: string
-  description: string
-  buttonText: string
-  image: StaticImageData
-  badge: string
+  id: number;
+  title: string;
+  description: string;
+  buttonText: string;
+  image: StaticImageData | string;
+  badge: string;
 }

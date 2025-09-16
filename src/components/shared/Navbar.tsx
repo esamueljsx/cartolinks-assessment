@@ -1,6 +1,5 @@
-import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
-import { Button } from '../common/button'
+import Link from "next/link";
+import { Button } from "../common/button";
 import {
   AssetsIcon,
   Avatar,
@@ -13,11 +12,10 @@ import {
   RealTime,
   Support,
   VideoIcon,
-} from '../common/icons'
-import { Tabs, TabsList, TabsTrigger } from '../common/tabs'
-import { ThemeSwitcher } from '../common/theme-toggle'
-import { ProfileList } from './ProfileList'
-import { Tooltip, TooltipContent, TooltipTrigger } from '../common/tooltip'
+} from "../common/icons";
+import { Tabs, TabsList, TabsTrigger } from "../common/tabs";
+import { ThemeSwitcher } from "../common/theme-toggle";
+import { ProfileList } from "./ProfileList";
 
 const Navbar = () => {
   return (
@@ -37,16 +35,9 @@ const Navbar = () => {
         {/* Nav Tabs */}
         <Tabs defaultValue="home" className="lg:flex hidden">
           <TabsList className="p-1.5 bg-[#f5f5f5] dark:bg-[#202020] rounded-2xl backdrop-blur-2xl select-none z-81 mx-auto flex w-fit origin-center transform justify-center">
-            <Tooltip>
-              <TooltipTrigger>
-                <TabsTrigger value="home" className="h-10 w-13 flex rounded-xl">
-                  <Home className="size-4.5" />
-                </TabsTrigger>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Home</p>
-              </TooltipContent>
-            </Tooltip>
+            <TabsTrigger value="home" className="h-10 w-13 flex rounded-xl">
+              <Home className="size-4.5" />
+            </TabsTrigger>
             <TabsTrigger
               value="image"
               className="h-10 w-13 flex rounded-xl"
@@ -119,7 +110,7 @@ const Navbar = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
