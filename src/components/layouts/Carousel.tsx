@@ -9,7 +9,7 @@ import { Button } from "../common/button";
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Scroll to Slide
   const scrollToSlide = useCallback((index: number) => {
