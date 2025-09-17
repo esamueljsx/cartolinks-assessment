@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { ThemeProvider } from "../common/theme";
 import Navbar from "./Navbar";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -13,9 +14,10 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
         enableSystem
         disableTransitionOnChange
       >
+        <Analytics />
+        <SpeedInsights />
         <Navbar />
         {children}
-        <Analytics />
       </ThemeProvider>
     </div>
   );
