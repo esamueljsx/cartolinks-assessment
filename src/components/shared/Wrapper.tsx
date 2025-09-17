@@ -1,7 +1,8 @@
-'use client'
-import type { ReactNode } from 'react'
-import { ThemeProvider } from '../common/theme'
-import Navbar from './Navbar'
+"use client";
+import type { ReactNode } from "react";
+import { ThemeProvider } from "../common/theme";
+import Navbar from "./Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -14,9 +15,10 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
       >
         <Navbar />
         {children}
+        <Analytics />
       </ThemeProvider>
     </div>
-  )
-}
+  );
+};
 
-export default Wrapper
+export default Wrapper;

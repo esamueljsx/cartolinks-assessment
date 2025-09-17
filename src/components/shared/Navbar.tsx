@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Nav Tabs */}
         <Tabs defaultValue="home" className="lg:flex hidden">
-          <TabsList className="p-1.5 bg-[#f5f5f5] dark:bg-[#202020] rounded-2xl backdrop-blur-2xl select-none z-81 mx-auto flex w-fit origin-center transform justify-center">
+          <TabsList className="p-1.5 bg-[#f5f5f5] dark:bg-[#202020] rounded-2xl select-none z-81 mx-auto flex w-fit origin-center transform justify-center">
             <TabsTrigger value="home" className="h-10 w-13 flex rounded-xl">
               <Home className="size-4.5" />
             </TabsTrigger>
@@ -101,7 +101,7 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="bg-[#f5f5f5] dark:bg-[#202020]"
+            className="lg:flex hidden bg-[#f5f5f5] dark:bg-[#202020]"
           >
             <Notification className="size-5" />
           </Button>
